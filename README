@@ -1,0 +1,26 @@
+DemoTool Guidance: 
+
+Compiling command in Sparc Machine: 
+gcc *.c -o *.out -lpthread -lnsl -lsocket
+
+After call "make", there should be several files: 
+test_server
+test_client1
+test_client2
+test_client3
+
+First for testing the server side: 
+test_client1:
+	There are 5 clients: a~e with listening port number 10000~10004
+	They login and request for client list in sequence. After they all login, every client will request the client list for one more time. 
+
+test_client2:
+	Still 5 clients same with in test_client1
+	a and b login and request for list. c register with a same listening port number as a and d register with a same client name as a. There should be errormessage if the student server works fine. 
+
+test_client3:
+	Still 5 clients. 
+	a, b and c login and request for list. Then b and c log out, d and e login and request for client list. After that, a request for client list. 
+
+There are sample outputs: test_client1.output test_client2.output and test_client3.output.
+
